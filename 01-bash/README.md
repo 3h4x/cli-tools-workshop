@@ -38,54 +38,54 @@ For commands below we do have variable `TEST='/test/variable/path/file.json'` in
 
 - Get length of string `${#VAR}`
 
-  ```bash
-  echo ${#TEST}
-  ```
-  Output: `29`
+    ```bash
+    echo ${#TEST}
+    ```
+    Output: `29`
 
 - Remove pattern from variable starting from left side `${VAR#pattern}`
 
-  Remove string `/` from variable. 
-  ```bash
-  echo ${TEST#/}
-  ```
-  Output: `test/variable/path/file.json`
+    Remove string `/` from variable. 
+    ```bash
+    echo ${TEST#/}
+    ```
+    Output: `test/variable/path/file.json`
 
 - Remove longest pattern from variable starting from left side `${VAR##pattern}`
 
-Greedy remove string `/` from variable. 
-```bash
-echo ${TEST##/}
-```
-Output: `file.json`
+    Greedy remove string `/` from variable. 
+    ```bash
+    echo ${TEST##/}
+    ```
+    Output: `file.json`
 
 - Remove pattern from variable starting from right side `${VAR%pattern}`
 
-Remove file extension `.json` from variable. 
-```bash
-echo ${TEST%.json}
-```
-Output: `/test/variable/path/file`
+    Remove file extension `.json` from variable. 
+    ```bash
+    echo ${TEST%.json}
+    ```
+    Output: `/test/variable/path/file`
 
 - Variable substitution `${VAR/search/replace}`
 
-Substitute `json` with `csv`
-```bash
-echo ${TEST/json/csv}
-```
-Output: `/test/variable/path/file.csv`
+    Substitute `json` with `csv`
+    ```bash
+    echo ${TEST/json/csv}
+    ```
+    Output: `/test/variable/path/file.csv`
 
 - Get only substring `${VAR:offset:length}`
 
-```bash
-echo ${TEST:20}
-```
-Output: `file.csv`
+    ```bash
+    echo ${TEST:20}
+    ```
+    Output: `file.csv`
 
-```bash
-echo ${TEST:20:4}
-```
-Output: `file`
+    ```bash
+    echo ${TEST:20:4}
+    ```
+    Output: `file`
 
 ## Executing commands
 
@@ -94,27 +94,27 @@ Output: `file`
 
 - `command1; command2`  
 
-`command1` will run and after it finish `command2` will run. `command1` doesn't have to finish successfully.
+    `command1` will run and after it finish `command2` will run. `command1`   doesn't have to finish successfully.
 
-Examples:  
-`echo start; echo end`   
- will print `start` and `end` in new line
-   
-`false; echo $?`  
-will print `1` but such commands will have return code 0 
+    Examples:  
+    `echo start; echo end`   
+    will print `start` and `end` in new line
+     
+    `false; echo $?`  
+    will print `1` but such commands will have return code 0 
 
 - `command1 || command2`
 
-`command2` will run only if `command1` has failed (exit code != 0)
+    `command2` will run only if `command1` has failed (exit code != 0)
 
-`false || echo "This will be printed"`
-`true || echo "This will not be printed"`
+    `false || echo "This will be printed"`
+    `true || echo "This will not be printed"`
 
 - `command1 && command2`
-`command2` will run only if `command1` has succeeded (exit code == 0)
+    `command2` will run only if `command1` has succeeded (exit code == 0)
 
-`true && echo "This will be printed"`
-`false && echo "This will not be printed"`
+    `true && echo "This will be printed"`
+    `false && echo "This will not be printed"`
 
 
 ### Background
