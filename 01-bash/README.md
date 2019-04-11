@@ -38,18 +38,18 @@ For commands below we do have variable `TEST='/test/variable/path/file.json'` in
 
 - Get length of string `${#VAR}`
 
-```bash
-echo ${#TEST}
-```
-Output: `29`
+  ```bash
+  echo ${#TEST}
+  ```
+  Output: `29`
 
 - Remove pattern from variable starting from left side `${VAR#pattern}`
 
-Remove string `/` from variable. 
-```bash
-echo ${TEST#/}
-```
-Output: `test/variable/path/file.json`
+  Remove string `/` from variable. 
+  ```bash
+  echo ${TEST#/}
+  ```
+  Output: `test/variable/path/file.json`
 
 - Remove longest pattern from variable starting from left side `${VAR##pattern}`
 
