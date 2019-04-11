@@ -59,7 +59,7 @@ For commands below we do have variable `TEST='/test/variable/path/file.json'` in
     ```
     Output: `file.json`
 
-- Remove pattern from variable starting from right side `${VAR%pattern}`
+- **Remove pattern from variable starting from right side `${VAR%pattern}`**
 
     Remove file extension `.json` from variable. 
     ```bash
@@ -67,7 +67,7 @@ For commands below we do have variable `TEST='/test/variable/path/file.json'` in
     ```
     Output: `/test/variable/path/file`
 
-- Variable substitution `${VAR/search/replace}`
+- **Variable substitution `${VAR/search/replace}`**
 
     Substitute `json` with `csv`
     ```bash
@@ -75,7 +75,7 @@ For commands below we do have variable `TEST='/test/variable/path/file.json'` in
     ```
     Output: `/test/variable/path/file.csv`
 
-- Get only substring `${VAR:offset:length}`
+- **Get only substring `${VAR:offset:length}`**
 
     ```bash
     echo ${TEST:20}
