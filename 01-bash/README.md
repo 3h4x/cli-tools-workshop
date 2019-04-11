@@ -36,14 +36,14 @@ echo "${TEST_PATH}_my_file"
 
 For commands below we do have variable `TEST='/test/variable/path/file.json'` in current shell context
 
-- Get length of string `${#VAR}`
+- **Get length of string `${#VAR}`**
 
     ```bash
     echo ${#TEST}
     ```
     Output: `29`
 
-- Remove pattern from variable starting from left side `${VAR#pattern}`
+- **Remove pattern from variable starting from left side `${VAR#pattern}`**
 
     Remove string `/` from variable. 
     ```bash
@@ -51,7 +51,7 @@ For commands below we do have variable `TEST='/test/variable/path/file.json'` in
     ```
     Output: `test/variable/path/file.json`
 
-- Remove longest pattern from variable starting from left side `${VAR##pattern}`
+- **Remove longest pattern from variable starting from left side `${VAR##pattern}`**
 
     Greedy remove string `/` from variable. 
     ```bash
