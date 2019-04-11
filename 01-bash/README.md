@@ -91,7 +91,6 @@ For commands below we do have variable `TEST='/test/variable/path/file.json'` in
 
 ### Sequenced
 
-
 - `command1; command2`  
 
     `command1` will run and after it finish `command2` will run. `command1`   doesn't have to finish successfully.
@@ -115,7 +114,15 @@ For commands below we do have variable `TEST='/test/variable/path/file.json'` in
 
     `true && echo "This will be printed"`
     `false && echo "This will not be printed"`
+    
+## Pipes
 
+Piping allows to use output of one command as an input to another one.  
+
+`echo "hello world!" | wc`  
+Output: `       1       2      12`
+
+Piping can be used many times
 
 ### Background
 
